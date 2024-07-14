@@ -31,3 +31,7 @@ Note: This section is for stages 2 and beyond.
    `cmd/myinterpreter/main.go`.
 1. Commit your changes and run `git push origin master` to submit your solution
    to CodeCrafters. Test output will be streamed to your terminal.
+
+# Building Mine
+
+Run `make run` to run the build

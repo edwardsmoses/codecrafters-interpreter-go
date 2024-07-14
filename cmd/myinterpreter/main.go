@@ -29,7 +29,10 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error reading file: %v\n", err)
 		os.Exit(1)
 	}
-	
+
+	fmt.Println("Tokenizing", filename)
+	fmt.Println("What are file-contents", fileContents)
+
 	if len(fileContents) > 0 {
 		panic("Scanner not implemented")
 	} else {
