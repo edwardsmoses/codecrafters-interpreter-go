@@ -26,8 +26,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Uncomment this block to pass the first stage
-	//
 	filename := os.Args[2]
 	rawFileContents, err := os.ReadFile(filename)
 	if err != nil {
