@@ -6,8 +6,8 @@ import (
 )
 
 const (
-	LEFT_BRAC  rune = '('
-	RIGHT_BRAC rune = ')'
+	LEFT_PAREN  rune = '('
+	RIGHT_PAREN rune = ')'
 )
 
 func main() {
@@ -40,9 +40,13 @@ func main() {
 	fileContents := string(rawFileContents)
 	fmt.Println("What's the string representation", fileContents)
 
-	if len(rawFileContents) > 0 {
-		panic("Scanner not implemented")
-	} else {
-		fmt.Println("EOF  null") // Placeholder, remove this line when implementing the scanner
+	for _, token := range rawFileContents {
+		if rune(token) == LEFT_PAREN {
+			fmt.Println("LEFT_PAREN", string(token))
+		} else if rune(token) == RIGHT_PAREN {
+			fmt.Println("RIGHT_PAREN", string(token))
+		}
 	}
+
+	fmt.Println("EOF null")
 }
