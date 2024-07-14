@@ -5,6 +5,11 @@ import (
 	"os"
 )
 
+const (
+	LEFT_BRAC  rune = '('
+	RIGHT_BRAC rune = ')'
+)
+
 func main() {
 	// You can use print statements as follows for debugging, they'll be visible when running tests.
 	fmt.Fprintln(os.Stderr, "Logs from your program will appear here!")
@@ -24,16 +29,18 @@ func main() {
 	// Uncomment this block to pass the first stage
 	//
 	filename := os.Args[2]
-	fileContents, err := os.ReadFile(filename)
+	rawFileContents, err := os.ReadFile(filename)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error reading file: %v\n", err)
 		os.Exit(1)
 	}
 
-	fmt.Println("Tokenizing", filename)
-	fmt.Println("What are file-contents", fileContents)
+	fmt.Println("What are file-contents", rawFileContents)
 
-	if len(fileContents) > 0 {
+	fileContents := string(rawFileContents)
+	fmt.Println("What's the string representation", fileContents)
+
+	if len(rawFileContents) > 0 {
 		panic("Scanner not implemented")
 	} else {
 		fmt.Println("EOF  null") // Placeholder, remove this line when implementing the scanner
