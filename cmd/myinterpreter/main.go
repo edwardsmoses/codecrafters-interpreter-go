@@ -35,16 +35,11 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println("What are file-contents", rawFileContents)
-
-	fileContents := string(rawFileContents)
-	fmt.Println("What's the string representation", fileContents)
-
 	for _, token := range rawFileContents {
 		if rune(token) == LEFT_PAREN {
-			fmt.Println("LEFT_PAREN", string(token))
+			fmt.Println("LEFT_PAREN", string(token), "null")
 		} else if rune(token) == RIGHT_PAREN {
-			fmt.Println("RIGHT_PAREN", string(token))
+			fmt.Println("RIGHT_PAREN", string(token), "null")
 		}
 	}
 
