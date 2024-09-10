@@ -8,6 +8,8 @@ import (
 const (
 	LEFT_PAREN  rune = '('
 	RIGHT_PAREN rune = ')'
+	LEFT_BRACE  rune = '{'
+	RIGHT_BRACE rune = '}'
 )
 
 func main() {
@@ -38,6 +40,10 @@ func main() {
 			fmt.Println("LEFT_PAREN", string(token), "null")
 		} else if rune(token) == RIGHT_PAREN {
 			fmt.Println("RIGHT_PAREN", string(token), "null")
+		} else if rune(token) == LEFT_BRACE {
+			fmt.Println("LEFT_BRACE", string(token), "null")
+		} else if rune(token) == RIGHT_BRACE {
+			fmt.Println("RIGHT_BRACE", string(token), "null")
 		}
 	}
 
